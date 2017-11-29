@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--My StyleSheet-->
+    <link href="css/myStyleSheet.css" type="text/css" rel="StyleSheet" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> </head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/mobilefriendly.js"></script>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="black">
+                <div class="container nav-wrapper"> <a href="index.html" class="brand-logo white-text">Spec4Games</a> <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down black-text white-text">
+                        <li><a class="white-text" href="createusr.html">| Sign Up |</a></li>
+                        <li><a class="white-text" href="login.html">| Login |</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><a class="black-text" href="createusr.html">Sign Up</a></li>
+                        <li><a class="black-text" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div> <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a> <img id="headerbanner" class="responsive-img" src="assets/header.jpeg" style="width: 100%; " /> </header>
+    <!-- Tap Target Structure -->
+    <div class="tap-target" data-activates="menu">
+        <div class="tap-target-content">
+            <h5>Title</h5>
+            <p>A bunch of text</p>
+        </div>
+    </div>
+    <main>
+    <div class="container card-content">                    
+            <div class="section">
+                <p class="caption">Have a question? Don't hesitate to send us a message. I will be happy to help.</p>
+                    <div class="row">
+                   
+                      <div class="col s12 m6">
+                        <form class="contact-form">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="contact_name" name="contact_name" type="text">
+                              <label for="first_name">Name</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="contact_email" name="contact_email" type="email">
+                              <label for="email" class="">Email</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="contact_subject" name="contact_subject" type="text">
+                              <label for="website">Subject</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <textarea id="contact_message" name="contact_message" class="materialize-textarea"></textarea>
+                              <label for="message">Message</label>
+                            </div>
+                            <div class="row">
+                              <div class="input-field col s12">
+                                <button class="btn black waves-effect waves-light right" type="submit" name="btn-submit" id="submitbutton")>Send
+                                  <i class="mdi-content-send right"></i>
+              
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>                      
+                      <div class="col s12 m6">
+                        <ul class="collapsible collapsible-accordion" data-collapsible="accordion">                       
+                             <li >
+                            <div class="collapsible-header"><i class="material-icons">account_circle</i> About Me?</div>
+                            <div class="collapsible-body" style="display: none;">
+                              <p class="flow-text" >I am a level 4 HND student currently studying computing science at Stafford University in my first year.</p>
+                            </div>
+                          </li>
+                          <li >
+                            <div class="collapsible-header"><i class="material-icons">help</i> Need Help?</div>
+                            <div class="collapsible-body" style="display: none;">
+                              <p class="flow-text" >If help is needed navigate to the Help and Support page where information regrading many issues is located.</p>
+                            </div>
+                          </li>
+                           
+                        </ul>
+                      </div>
+                
+                    </div>
+                  </div>
+<div class="row">
+    <div class="col s12 m6 l4 center-align">
+        <a class="btn-floating btn-large waves-effect waves-light" href="https://www.facebook.com/sam.guzel"><img src="assets/facebook.png" class="circle responsive-img">Facebook</a>
+        <p>Facebook</p>
+    </div>
+    <div class="col s12 m6 l4 center-align">
+        <a class="btn-floating btn-large waves-effect waves-light" href="https://twitter.com/SamGuzel1"><img src="assets/twitter.png" class="circle responsive-img">Twitter</a>
+         <p>Twitter</p>
+    </div>
+    <div class="col s12 m6 l4 center-align">
+        <a class="btn-floating btn-large waves-effect waves-light" href="https://www.instagram.com/samguzel/"><img src="assets/instagram.png" class="circle responsive-img">Instagram</a>
+         <p>Instagram</p>
+    </div>
+</div>     
+</div>    
+        
+    </main>
+    
+    
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col s9 offset-s2">
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="AboutUs.html">About Us</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3 " href="forums.html">Forums</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="contactme.html">Contact us</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="ReportIssue.html">Report A Problem</a></div>
+                </div>
+            </div>
+            <div class="footer-copyright black">
+                <div class="container black"> © 2017 Copyright Text </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
