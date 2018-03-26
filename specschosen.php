@@ -17,30 +17,35 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/mobilefriendly.js"></script>
   <header>
-    <div class="navbar-fixed">
-      <nav class="black">
-        <div class="container nav-wrapper">
-          <a href="index.html" class="brand-logo white-text">Spec4Games</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse ">
-            <i class="material-icons">menu</i>
-          </a>
+  <div class="navbar-fixed">
+  <nav class="black">
+      <div class="container nav-wrapper"> <a href="index.php" class="brand-logo white-text">Spec4Games</a> <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down black-text white-text">
-            <li>
-              <a class="white-text" href="createusr.html">| Sign Up |</a>
-            </li>
-            <li>
-              <a class="white-text" href="login.html">| Login |</a>
-            </li>
+          <?php if (isset($_SESSION['usr_id'])) { ?>
+  <li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
+  <li><a href="Editdetails.php">Edit Details</a></li
+          <li><a href="logout.php">Log Out</a></li>
+          <?php echo get_gravatar($_SESSION['usr_email'],40,'mm','g',true,array())?>
+  <?php } else { ?>
+  <li><a href="login.php">| Login |</a></li>
+  <li><a href="createusr.php">| Sign Up |</a></li>
+         
+  <?php } ?>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li>
-              <a class="black-text" href="createusr.html">Sign Up</a>
-            </li>
-            <li>
-              <a class="black-text" href="login.html">Login</a>
-            </li>
+          <?php if (isset($_SESSION['usr_id'])) { ?>
+              <li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
+              <li><a href="Editdetails.php">Edit Details</a></li
+              <li><a href="logout.php">Log Out</a></li>
+              <?php echo get_gravatar($_SESSION['usr_email'],40,'mm','g',true,array())?>
+              <?php } else { ?>
+              <li><a href="login.php">| Login |</a></li>
+              <li><a href="createusr.php">| Sign Up |</a></li>
+             
+              <?php } ?>
+              
           </ul>
-        </div>
+      </div>
       </nav>
     </div>
     <a href="#" data-activates="slide-out" class="button-collapse">
@@ -119,16 +124,16 @@
       <div class="row">
         <div class="col s9 offset-s2">
           <div class="col s12 m6 l3">
-            <a class="grey-text text-lighten-3" href="AboutUs.html">About Us</a>
+            <a class="grey-text text-lighten-3" href="AboutUs.php">About Us</a>
           </div>
           <div class="col s12 m6 l3">
-            <a class="grey-text text-lighten-3 " href="forums.html">Forums</a>
+            <a class="grey-text text-lighten-3 " href="forums.php">Forums</a>
           </div>
           <div class="col s12 m6 l3">
-            <a class="grey-text text-lighten-3" href="contactme.html">Contact us</a>
+            <a class="grey-text text-lighten-3" href="contactme.php">Contact us</a>
           </div>
           <div class="col s12 m6 l3">
-            <a class="grey-text text-lighten-3" href="ReportIssue.html">Report A Problem</a>
+            <a class="grey-text text-lighten-3" href="ReportIssue.php">Report A Problem</a>
           </div>
         </div>
       </div>

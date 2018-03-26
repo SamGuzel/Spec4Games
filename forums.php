@@ -17,18 +17,35 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/mobilefriendly.js"></script>
     <header>
-        <div class="navbar-fixed">
-            <nav class="black">
-                <div class="container nav-wrapper"> <a href="index.html" class="brand-logo white-text">Spec4Games</a> <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down black-text white-text">
-                        <li><a class="white-text" href="createusr.html">| Sign Up |</a></li>
-                        <li><a class="white-text" href="login.html">| Login |</a></li>
-                    </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <li><a class="black-text" href="createusr.html">Sign Up</a></li>
-                        <li><a class="black-text" href="login.html">Login</a></li>
-                    </ul>
-                </div>
+    <div class="navbar-fixed">
+    <nav class="black">
+        <div class="container nav-wrapper"> <a href="index.php" class="brand-logo white-text">Spec4Games</a> <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down black-text white-text">
+            <?php if (isset($_SESSION['usr_id'])) { ?>
+            <li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
+            <li><a href="Editdetails.php">Edit Details</a></li
+            <li><a href="logout.php">Log Out</a></li>
+            <?php echo get_gravatar($_SESSION['usr_email'],40,'mm','g',true,array())?>
+            <?php } else { ?>
+            <li><a href="login.php">| Login |</a></li>
+            <li><a href="createusr.php">| Sign Up |</a></li>
+           
+            <?php } ?>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+            <?php if (isset($_SESSION['usr_id'])) { ?>
+                <li><p class="navbar-text">Signed in as <?php echo $_SESSION['usr_name']; ?></p></li>
+                <li><a href="Editdetails.php">Edit Details</a></li
+                <li><a href="logout.php">Log Out</a></li>
+                <?php echo get_gravatar($_SESSION['usr_email'],40,'mm','g',true,array())?>
+                <?php } else { ?>
+                <li><a href="login.php">| Login |</a></li>
+                <li><a href="createusr.php">| Sign Up |</a></li>
+               
+                <?php } ?>
+                
+            </ul>
+        </div>
             </nav>
         </div> <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a> <img id="headerbanner" class="responsive-img" src="assets/header.jpeg" style="width: 100%; " /> </header>
     <!-- Tap Target Structure -->
@@ -45,7 +62,7 @@
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text black " style="margin-bottom: : 0px"> <span class="card-title">Announcements</span> </div>
                         <div class="card-content white-text grey">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            <p>Welcome To The Forums. Click A topic to enter and have a read, comment and discuss! - English Comments please (Just to keep it universal), No Racism or talk of Politics - We're here to discuss PC!</p>
                         </div>
                     </div>
                 </div> <a class="twitter-timeline" href="https://twitter.com/hashtag/Gaming" data-widget-id="935669741192138753">#Gaming Tweets</a>
@@ -63,38 +80,38 @@
                 </script>
             </div>
             <div class="col s12 m6">
-                <h2 class="header">Post 1</h2>
+                <h2 class="header">Hardware & Software</h2>
                 <div class="card horizontal black">
                     <div class="card-image"> <img src="assets/image4.jpeg"> </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p style="color: white">This will contain a brief description of what this forum post is about.</p>
+                            <p style="color: white">Join us in discussing the latest Hardware, Leave a comment</p>
                         </div>
-                        <div class="card-action"> <a href="forumpost.html">Click me to Enter!!!</a> </div>
+                        <div class="card-action"> <a href="forumpost.php">Click me to Enter!!!</a> </div>
                     </div>
                 </div>
             </div>
             <div class="col s12 m6">
-                <h2 class="header">Post 2</h2>
+                <h2 class="header">Game Talk</h2>
                 <div class="card horizontal black">
                     <div class="card-image"> <img src="assets/image5.jpeg"> </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p style="color: white">This will contain a brief description of what this forum post is about.</p>
+                            <p style="color: white">Lets Discuss the latest Game News</p>
                         </div>
-                        <div class="card-action"> <a href="forumpost.html">Click me to Enter!!!</a> </div>
+                        <div class="card-action"> <a href="forumpost.php">Click me to Enter!!!</a> </div>
                     </div>
                 </div>
             </div>
             <div class="col s12 m6">
-                <h2 class="header">Post 3</h2>
+                <h2 class="header">Off Topic</h2>
                 <div class="card horizontal black">
                     <div class="card-image"> <img src="assets/image6.jpeg"> </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <p style="color: white">This will contain a brief description of what this forum post is about.</p>
+                            <p style="color: white">Lets Talk About Something Else?</p>
                         </div>
-                        <div class="card-action"> <a href="forumpost.html">Click me to Enter!!!</a> </div>
+                        <div class="card-action"> <a href="forumpost.php">Click me to Enter!!!</a> </div>
                     </div>
                 </div>
             </div>
@@ -104,10 +121,10 @@
         <div class="container">
             <div class="row">
                 <div class="col s9 offset-s2">
-                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="AboutUs.html">About Us</a></div>
-                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3 " href="forums.html">Forums</a></div>
-                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="contactme.html">Contact us</a></div>
-                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="ReportIssue.html">Report A Problem</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="AboutUs.php">About Us</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3 " href="forums.php">Forums</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="contactme.php">Contact us</a></div>
+                    <div class="col s12 m6 l3"><a class="grey-text text-lighten-3" href="ReportIssue.php">Report A Problem</a></div>
                 </div>
             </div>
             <div class="footer-copyright black">
